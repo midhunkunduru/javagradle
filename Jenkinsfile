@@ -1,13 +1,14 @@
 node("master")
-  def a = "Version"
+      def a = "Version"
   def b = "Application"
-    
 {
     stage("Checkout")
-    echo "${Version}"
-    echo "${Application}"
+  
+    
 {  
     sh 'echo $BRANCH_NAME'
+  echo "${Version}"
+    echo "${Application}"
 }
     
     stage("Build")
