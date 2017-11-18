@@ -14,7 +14,7 @@ node("master")
     stage("Build")
     {
         echo "Sample build"
-        build job: 'parametertest/master', parameters: [string(name: 'Version', value: 'a'), string(name: 'Application', value: 'b')]
+        build job: 'parametertest/master', parameters: [string(name: 'Version', value: '${a}'), string(name: 'Application', value: '${b}')]
     }
 
 }
