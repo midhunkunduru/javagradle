@@ -1,15 +1,15 @@
 node("master")
-     
+    
 {
-  
+  def a = "Version"
+  def b = "Application" 
     stage("Checkout")
   
     {  
-         def a = "Version"
-  def b = "Application"
+         
     //sh 'echo $BRANCH_NAME'
-    echo "${Version}"
-    echo "${Application}"
+    echo "${a}"
+    echo "${b}"
 }
     
     stage("Build")
